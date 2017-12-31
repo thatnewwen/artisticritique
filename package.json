@@ -1,0 +1,37 @@
+{
+  "name": "reactjs-starter",
+  "version": "0.1.1",
+  "private": true,
+  "dependencies": {
+    "animated": "^0.2.1",
+    "highlight.js": "~9.12.0",
+    "jquery": "~3.2.1",
+    "js-cookie": "^2.2.0",
+    "lazyimage": "^2.1.2",
+    "moment": "^2.20.1",
+    "prismic-javascript": "^1.4.1",
+    "prismic-reactjs": "^0.2.0",
+    "prismic-toolbar": "0.0.8",
+    "qs": "^6.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-moment": "^0.6.8",
+    "react-router-dom": "^4.2.2",
+    "react-router-page-transition": "^3.0.2",
+    "react-transition-group": "^2.2.1",
+    "whatwg-fetch": "~2.0.3"
+  },
+  "devDependencies": {
+    "react-scripts": "~1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": ">=4.8.1",
+    "npm": ">=2.15.11"
+  }
+}

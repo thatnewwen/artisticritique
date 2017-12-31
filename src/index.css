@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Monoton|Source+Serif+Pro');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Serif Pro';
+}
+
+.noUnderline{
+  text-decoration: none;
+}
+
+.navbar{
+  padding: 10px;
+  text-align: center;
+}
+
+.masthead{
+  text-decoration: none;
+  color: orangered;
+  font-size: 25px;
+  font-family: 'Monoton';
+  -webkit-animation:colorchange 5s infinite alternate;
+}
+
+.footer{
+  background: black;
+  text-align: center;
+}
+
+.footerText{
+  color: #6b6b6b;
+  font-size: 12px;
+  font-style: italic;
+}
+
+@-webkit-keyframes colorchange {
+  0%{
+    color: orange;
+  }
+  
+  100% {
+    color: red;
+  }
+}
+
+.parentContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.longformContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #00000061;
+  transition: 0.5s ease background;
+}
+
+.longformContainer:hover img{
+  border-right: 5px solid orangered;
+}
+
+.longformContainer img{
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+  border-right: 5px solid #e2e2e2;
+  transition: 0.5s ease border-right;
+}
+
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  width: 200px;
+  height: 300px;
+  background: whitesmoke;
+}
+
+.longformContainer h1{
+  text-align: left;
+  font-family: 'Barlow';
+  font-size: 30px;
+  color: #506576;
+}
+
+.longformContainer h2{
+  color: orangered;
+  font-size: 15px;
+  font-family: 'Barlow';
+}
+
+.wio-link {
+  display: none;
+}
+
+.page{
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+.pageBody{
+  max-width: 800px;
+  padding-left: 100px;
+  width: 50%;
+}
+
+.backgroundImage{
+  width: 100%;
+}
+
+.mediaBox{
+  border: 1px solid #e6e6e6;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 100px;
+  margin-bottom: 20px;
+}
+
+.mediaBox div{
+  position: relative;
+}
+
+.mediaBox h3{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 7px;
+  line-height: 10px;
+  font-family: 'Barlow';
+  color: orangered;
+  margin: 0px;
+}
+
+.mediaBox span{
+  font-size: 12px;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+
+.mediaMeta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.coverImage{
+  width: 100%;
+}
+
+.page h1{
+  padding: 0px 0 80px 0;
+  font-family: 'Barlow';
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.page h2{
+  font-family: 'Barlow';
+  font-size: 25px;
+  padding: 40px 0 10px 0;
+  color: orangered;
+}
+
+.page p{
+  margin-bottom: 20px;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: 'Source Serif Pro';
+  text-align: left;
+}
+
+em{
+  font-style: italic;
+}
+
+.date{
+  text-align: right;
+  padding-right: 10px;
+  color: orangered;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Barlow';
+  margin-top: -10px /* Gap between image and date. */
+}
+
+.greyBorderBottom{
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.subHead{
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Barlow';
+  font-size: 12px;
+}
+
+.section{
+  min-height: 100vh;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;
+    transform:  translate(0px,40px);}
+  100% {opacity: 1;
+    transform:  translate(0px,0px);}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;
+    transform:  translate(0px,40px);}
+  100% {opacity: 1;
+    transform:  translate(0px,0px);}
+}
+
+@media(max-width: 800px) {
+  .mediaBox{
+    position: static;
+  }
+
+  .pageBody{
+    padding: 0 50px;
+    width: auto;
+  }
+
+  .longformContainer{
+    flex-direction: column;
+  }
+
+  .longformContainer img{
+    width: 100%;
+    border-right: none;
+    border-bottom: 5px solid #e2e2e2;
+  }
+
+  .longformContainer:hover img{
+    border-right: none;
+  }
+
+  .titleContainer{
+    width: 100%;
+    height: 150px;
+    padding-left: 30px;
+  }
+}
