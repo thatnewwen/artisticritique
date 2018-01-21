@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from './Home';
 import Page from './Page';
+import Media from './Media';
 import Preview from './Preview';
 import Help from './Help';
 import NotFound from './NotFound';
@@ -20,7 +21,8 @@ const App = (props) => (
         <Switch>
           <Route exact path="/" render={routeProps => <Home {...routeProps} prismicCtx={props.prismicCtx} />} />
           <Route exact path="/help" component={Help} />
-          <Route exact path="/page/:uid" render={routeProps => <Page {...routeProps} prismicCtx={props.prismicCtx} />} />
+          <Route exact path="/longform/:uid" render={routeProps => <Page {...routeProps} prismicCtx={props.prismicCtx} />} />
+          <Route exact path="/media/:uid" render={routeProps => <Media {...routeProps} prismicCtx={props.prismicCtx} />} />
           <Route component={NotFound} />
         </Switch>
       </div>

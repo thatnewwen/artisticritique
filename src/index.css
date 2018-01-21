@@ -52,10 +52,13 @@ body {
   padding-bottom: 60px;
 }
 
-.longformContainer{
+.longformContainer, .mediaContainer{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 700px;
+  overflow: hidden;
+  position: relative;
 }
 
 .overlay{
@@ -80,14 +83,63 @@ body {
   transition: 0.5s ease border-right;
 }
 
+.mediaContainer img{
+  height: 200px;
+  object-fit: cover;
+  border-right: 5px solid #e2e2e2;
+  transition: 0.5s ease border-right;
+}
+
 .titleContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-  width: 200px;
   height: 300px;
   background: whitesmoke;
+  position: relative;
+}
+
+.longformContainer .titleContainer{
+  width: 200px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.mediaContainer .titleContainer{
+  height: 200px;
+  justify-content: flex-start;
+}
+
+.mediaContainer h1{
+  text-align: left;
+  font-family: 'Barlow';
+  padding-bottom: 5px;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
+  color: orangered;
+}
+
+.page.mediaPage h1{
+  padding: 40px 0;
+}
+
+.mediaPage .pageBody{
+  padding-left: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mediaPage .pageBody p{
+  font-family: 'Barlow';
+  font-size: 30px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+.mediaContainer p{
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 15px;
 }
 
 .longformContainer h1{
@@ -138,19 +190,29 @@ body {
 
 .mediaBox h3{
   position: absolute;
-  top: 3px;
-  left: 3px;
-  font-size: 7px;
+  top: 5px;
+  left: 5px;
+  font-size: 8px;
   line-height: 10px;
   font-family: 'Barlow';
   color: orangered;
   margin: 0px;
 }
 
+.titleOverlay{
+  z-index: 10;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(#ffffff00, whitesmoke);
+}
+
 .mediaBox span{
   font-size: 12px;
   padding-left: 5px;
   text-transform: capitalize;
+  vertical-align: sub;
 }
 
 .mediaMeta {
@@ -235,6 +297,15 @@ em{
 }
 
 @media(max-width: 800px) {
+  .mediaPage .pageBody{
+    padding: 0 20px;
+  }
+
+  .mediaPage .pageBody p{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .mediaBox{
     position: static;
   }
@@ -246,6 +317,7 @@ em{
 
   .longformContainer{
     flex-direction: column;
+    width: 100%;
   }
 
   .longformContainer img{
@@ -258,9 +330,16 @@ em{
     border-right: none;
   }
 
+  .longformContainer .titleContainer{
+    width: -webkit-fill-available;
+  }
+
+  .mediaContainer .titleContainer{
+    height: 200px;
+  }
+
   .titleContainer{
     width: 100%;
     height: 150px;
-    padding-left: 30px;
   }
 }
