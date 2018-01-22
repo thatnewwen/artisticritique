@@ -1,1 +1,1 @@
-# artisticrtique
+# artisticritique
