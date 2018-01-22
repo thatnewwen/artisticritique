@@ -58,9 +58,9 @@ class Page extends React.Component {
         <div className="page" data-wio-id={this.state.doc.id}>
           <MetaTags>
             <title>{PrismicReact.RichText.asText(this.state.doc.data.title)} - artisticritique</title>
-            <meta property="og:title" content={PrismicReact.RichText.asText(this.state.doc.data.title) + ' - artisticritique'}>
-            <meta property="og:type" content="website">
-            <meta property="og:image" content={this.state.doc.data.background.url}>
+            <meta property="og:title" content={PrismicReact.RichText.asText(this.state.doc.data.title) + ' - artisticritique'} />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content={this.state.doc.data.background.url} />
           </MetaTags>
           <img className="backgroundImage" alt="background" src={this.state.doc.data.background.url} />
           <div className="date">Last Updated on <Moment format="MMMM Do YYYY">{this.state.doc.last_publication_date}</Moment></div>
