@@ -60,7 +60,7 @@ class Page extends React.Component {
             <meta property="og:title" content={PrismicReact.RichText.asText(this.state.doc.data.title)} />
             <meta property="og:type" content="article" />
             <meta property="og:url" content={'artisticritique.com/longform/' + this.state.doc.uid} />
-            <meta property="og:image" content={this.state.media.data.cover.url} />
+            <meta property="og:image" content={this.state.doc.data.background.url} />
             <meta property="og:site_name" content="artisticritique" />
           </Helmet>
           <img className="backgroundImage" alt="background" src={this.state.doc.data.background.url} />
