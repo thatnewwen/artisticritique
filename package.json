@@ -36,5 +36,6 @@
   "engines": {
     "node": ">=4.8.1",
     "npm": ">=2.15.11"
-  }
+  },
+  "build": "react-scripts build && echo '/*    /index.html   200' > build/_redirects"
 }
